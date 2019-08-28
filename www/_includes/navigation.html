@@ -1,0 +1,29 @@
+<section id="main-nav-back">
+  <a href="index.html">
+    <img id="author-stylized" src="assets/images/author_name.png" alt="Author Name" />
+  </a>
+  <nav id="main-nav">
+    <ul>
+      {% for item in site.data.navigation %}
+        <li>
+          {% if item.external %}
+            <a href="{{ item.link }}" class="nav-element" target="_blank">{{ item.name }}</a>
+          {% else %}
+            <a href="{{ item.link }}" class="nav-element">{{ item.name }}</a>
+          {% endif %}
+          {% if item.sub.first %}
+            <ul>
+              {% for subitem in item.sub %}
+                {% if subitem.external %}
+                  <a href="{{ subitem.link }}" class="nav-element" target="_blank">{{ subitem.name }}</a>
+                {% else %}
+                  <a href="{{ subitem.link }}" class="nav-element">{{ subitem.name }}</a>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</section>

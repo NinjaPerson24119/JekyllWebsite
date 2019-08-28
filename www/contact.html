@@ -1,0 +1,26 @@
+---
+layout: default
+title: Contact
+---
+
+{% assign contact_complete_route = site.url | append: site.baseurl | append: "/contact_complete.html" %}
+
+<!-- https://getsimpleform.com/ -->
+<form action="{{ site.data.settings.contact_action }}" method="post" id="contact-form">
+  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+  <input type='hidden' name='redirect_to' value="{{ contact_complete_route }}"/>
+
+  <!-- all your input fields here.... -->
+  <label>Name</label>
+  <input type='text' name='name' placeholder="* required" class="contact-field" required/>
+  
+  <label>Email</label>
+  <input type='text' name='email' class="contact-field"/>
+  
+  <label>Message</label>
+  <textarea rows="8" name='message' placeholder="* required" required></textarea>
+  
+  <div class="contact-button-div">
+      <input type='submit' value='Send' class="contact-button"/>
+  </div>
+</form>

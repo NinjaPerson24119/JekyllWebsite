@@ -1,0 +1,24 @@
+---
+---
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <ul class="icons">
+      <a href="{{ site.data.settings.twitter }}" class="icon fa-twitter"><span class="label">Twitter</span></a>
+      <a href="{{ site.data.settings.facebook }}" class="icon fa-facebook"><span class="label">Facebook</span></a>
+      <a href="{{ site.data.settings.instagram }}" class="icon fa-instagram"><span class="label">Instagram</span></a>
+      <a href="{{ site.data.settings.wattpad }}" id="wattpad" class="icon-wattpad"></a>
+   </ul>
+  </div>
+
+  <div class="copyright">
+    &copy; Some Person's Name 2019
+    <br>
+    Based on <a href="https://templated.co/hielo">Hielo</a> by <a href="https://templated.co/">TEMPLATED</a> <a href="http://creativecommons.org/licenses/by/3.0">(CC BY 3.0)</a> 
+    {% if jekyll.environment != "production" %}
+      <br>
+      This is a development build
+    {% endif %}
+  </div>
+</footer>

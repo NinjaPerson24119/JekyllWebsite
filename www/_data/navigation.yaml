@@ -1,0 +1,14 @@
+- name: Home
+  link: /
+- name: Author
+  link: author.html
+- name: Books
+  link: '#'
+  sub:
+    - name: Some Series
+      link: book_series.html
+- name: Contact
+  link: contact.html
+- name: Shop
+  link: https://www.etsy.com
+  external: true
