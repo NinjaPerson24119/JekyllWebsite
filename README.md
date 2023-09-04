@@ -1,4 +1,6 @@
-# Author website created for someone
+# Simple Jekyll Website for an Author
+
+![Walkthrough of website](demo.webp)
 
 This site is statically generated. It's built using an HTML5 template, Jekyll, CSS/SCSS, and JavaScript.
 
