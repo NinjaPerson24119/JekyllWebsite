@@ -6,16 +6,19 @@ add_line() {
     grep -qF "$1" "$2" || echo "$1" >> "$2"
 }
 
-# Source: https://jekyllrb.com/docs/installation/ubuntu/
+# Sources:
+# - 
+# - 
+# Install rbenv and specific Ruby version
+# https://github.com/rbenv/rbenv#basic-git-checkout
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
+rbenv install 2.7.8
 
-# install Ruby
-sudo apt-get install ruby-full build-essential zlib1g-dev
+cd www
+gem update --system
 
-# set .bashrc
-add_line '# Install Ruby Gems to ~/gems' $HOME/.bashrc
-add_line 'export GEM_HOME="$HOME/gems"' $HOME/.bashrc
-add_line 'export PATH="$HOME/gems/bin:$PATH"' $HOME/.bashrc
-source ~/.bashrc
-
-# install Jekyll
+# install Jekyll deps
+# https://jekyllrb.com/docs/installation/ubuntu/
+sudo apt-get install build-essential zlib1g-dev
 sudo gem install jekyll bundler
