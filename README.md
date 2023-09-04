@@ -1,4 +1,4 @@
-# Simple Jekyll Website for an Author
+# Jekyll Website for an Author
 
 ![Walkthrough of website](demo.webp)
 
